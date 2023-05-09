@@ -2,7 +2,8 @@ import { Directive, Field, ID, ObjectType } from '@nestjs/graphql';
 import { Account } from './account.entity';
 
 @ObjectType()
-@Directive('@key(fields: "id")')
+@Directive('@extends')
+@Directive('@key(fields: "accountId")')
 export class Customer {
   @Field((type) => ID)
   @Directive('@external')
@@ -12,7 +13,7 @@ export class Customer {
   @Directive('@external')
   name: string;
 
-  @Field((type) => String, { nullable: true })
+  @Field((type) => ID, { nullable: true })
   @Directive('@external')
   accountId: string;
 
@@ -55,7 +56,7 @@ export class FamilyMember {
   @Field((type) => String, { nullable: true })
   @Directive('@external')
   name: string;
-  
+
   @Field((type) => String, { nullable: true })
   @Directive('@external')
   type: string;

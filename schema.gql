@@ -34,7 +34,7 @@ type Employee {
 type Customer {
   id: ID!
   name: String
-  accountId: String
+  accountId: ID
   account: Account
   email: String
   jobPosition: String
@@ -54,7 +54,7 @@ type Account {
   id: ID
   name: String
   agency: String
-  employeeId: String
+  employeeId: ID
   balance: String
   customer: Customer
   employee: Employee

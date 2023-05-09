@@ -14,7 +14,7 @@ export class Account {
   @Field((type) => String, { nullable: true })
   agency: string;
 
-  @Field((type) => String, { nullable: true })
+  @Field((type) => ID, { nullable: true })
   employeeId: string;
 
   @Field((type) => String, { nullable: true })
@@ -25,6 +25,7 @@ export class Account {
 
   @Field((type) => Employee, { nullable: true })
   employee: Employee;
+  ó;
 
   @Field((type) => String, { nullable: true })
   creationDate: Date;

@@ -10,6 +10,7 @@ import {
 import { AccountService } from './account.service';
 import { Account } from './entities/account.entity';
 import { Employee } from './entities/employee.entity';
+import { Customer } from './entities/customer.entity';
 
 @Resolver((of) => Account)
 export class AccountResolver {
